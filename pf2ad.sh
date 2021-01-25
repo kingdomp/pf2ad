@@ -92,7 +92,7 @@ if [ ! "$(/usr/sbin/pkg info | grep pfSense-pkg-squid)" ]; then
 fi
 cd /usr/local/pkg
 fetch -o - -q https://github.com/kingdomp/pf2ad/blob/main/squid_winbind_auth.patch | patch -b -p0 -f
-fetch -o /usr/local/pkg -q https://github.com/kingdomp/pf2ad/blob/main/pf2ad-2.4.4/squid.inc
+fetch -o /usr/local/pkg -q https://github.com/kingdomp/pf2ad/blob/main/squid.inc
 
 if [ ! -f "/usr/local/etc/smb4.conf" ]; then
 	touch /usr/local/etc/smb4.conf
